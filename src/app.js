@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-// const config = require('./config')
+const config = require('./config')
 // Routers
 const usersRouter = require("./users/users.router").router
 const authRouter = require("./auth/auth.router").router
@@ -38,7 +38,7 @@ app.use("/api/v1/conversations", conversationRouter);
 app.use("/api/v1/messages", messageRouter);
 app.use("/api/v1/participants", participansRouter);
 
-app.listen('https://marvelous-dry-tortugas-83848.herokuapp.com', () => {
+app.listen(config.port, () => {
     //console.log(`Server started at port ${config.port}`)
 })
 
