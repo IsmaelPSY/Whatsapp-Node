@@ -2,6 +2,7 @@ const controllers = require('./auth.controller')
 const jwt = require('jsonwebtoken')
 const toPromise = require('../tools/toPromise').toPromise
 const config = require('../config')
+const crypto = require('../tools/crypto')
 
 
 
